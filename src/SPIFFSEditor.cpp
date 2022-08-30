@@ -325,12 +325,12 @@ static void loadExcludeList(fs::FS &_fs, const char *filename){
         //addExclude("/*.js.gz");
         return;
     }
-#ifdef ESP32
+//#ifdef ESP32
     if(excludeFile.isDirectory()){
       excludeFile.close();
       return;
     }
-#endif
+//#endif
     if (excludeFile.size() > 0){
       uint8_t idx;
       bool isOverflowed = false;
